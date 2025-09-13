@@ -1,0 +1,144 @@
+/* Styles for the Accueil page */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0a1a;
+      color: #fff;
+    }
+
+    header {
+      background: #000;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Logo styles */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-image {
+      width: 50px;  /* Ajustez cette valeur pour modifier la largeur */
+      height: auto; /* Maintient les proportions de l'image */
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31') no-repeat center/cover;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      font-size: 16px;
+      background: #1d4ed8;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .hero button:hover {
+      background: #2563eb;
+    }
+
+    .features {
+      background: #0d0d25;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .feature {
+      background: #000;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    .feature img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .audience {
+      background: #080820;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .audience h2 {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .audience-box {
+      background: #111;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #000;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    footer a {
+      color: #aaa;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }

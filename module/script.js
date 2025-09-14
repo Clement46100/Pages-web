@@ -79,12 +79,12 @@ function displayModules(modules) {
     modules.forEach(module => {
         const moduleElement = document.createElement('div');
         moduleElement.className = 'module-card';
-        
+
         // Déterminer l'icône de progression
         let progressIcon = 'play-circle';
         let progressText = 'Commencer';
         let progressClass = '';
-        
+
         if (module.progress > 0 && module.progress < 100) {
             progressIcon = 'sync-alt';
             progressText = 'Continuer';
@@ -141,8 +141,8 @@ function filterModules() {
     const category = document.getElementById('categoryFilter').value;
 
     const filtered = modulesData.filter(module => {
-        const matchesSearch = module.title.toLowerCase().includes(searchTerm) || 
-                            module.description.toLowerCase().includes(searchTerm);
+        const matchesSearch = module.title.toLowerCase().includes(searchTerm) ||
+            module.description.toLowerCase().includes(searchTerm);
         const matchesCategory = !category || module.category === category;
         return matchesSearch && matchesCategory;
     });
@@ -158,10 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Écouter les changements de recherche
     const searchInput = document.getElementById('searchInput');
     const categoryFilter = document.getElementById('categoryFilter');
-    
+
     searchInput.addEventListener('input', filterModules);
     categoryFilter.addEventListener('change', filterModules);
-    
+
     // Ajouter un délai pour éviter de filtrer à chaque frappe
     let searchTimeout;
     searchInput.addEventListener('keyup', () => {
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
             startModule(moduleId);
         }
     });
-    
+
     // Ajouter le style pour les notifications
     addNotificationStyles();
 });
@@ -263,14 +263,14 @@ function startModule(moduleId) {
         if (module.progress < 100) {
             module.progress += 25;
             if (module.progress > 100) module.progress = 100;
-            
+
             // Mettre à jour l'affichage
             displayModules(modulesData);
-            
+
             // Mettre à jour le filtre si actif
             filterModules();
         }
-        
+
         // Pour la démo, on affiche une notification
         showNotification(`Module "${module.title}" mis à jour : ${module.progress}%`);
     }
@@ -284,20 +284,20 @@ function showNotification(message) {
         <i class="fas fa-check-circle"></i>
         <span>${message}</span>
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Animation d'apparition
     setTimeout(() => {
         notification.style.opacity = '1';
         notification.style.transform = 'translateY(0)';
     }, 10);
-    
+
     // Disparaître après 3 secondes
     setTimeout(() => {
         notification.style.opacity = '0';
         notification.style.transform = 'translateY(20px)';
-        
+
         // Supprimer après l'animation
         setTimeout(() => {
             notification.remove();

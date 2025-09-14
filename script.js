@@ -1,18 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Fonction pour basculer la visibilité du mot de passe
     function togglePasswordVisibility(inputId, iconElement) {
         const passwordInput = document.getElementById(inputId);
         if (!passwordInput) return;
-        
+
         // Bascher entre type="password" et type="text"
         const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
         passwordInput.setAttribute('type', type);
-        
+
         // Mettre à jour l'icône
         if (iconElement) {
             const isPasswordVisible = type === 'text';
             iconElement.setAttribute('data-visible', isPasswordVisible);
-            
+
             // Changer l'icône en fonction de l'état
             const eyeIcon = iconElement.querySelector('svg');
             if (eyeIcon) {
@@ -37,14 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Ajouter les gestionnaires d'événements pour les icônes d'œil
     document.querySelectorAll('.eye-icon').forEach(icon => {
-        icon.addEventListener('click', function(e) {
+        icon.addEventListener('click', function (e) {
             e.preventDefault();
             const inputId = this.getAttribute('data-target');
             if (inputId) {
                 togglePasswordVisibility(inputId, this);
             }
         });
-        
+
         // Ajouter un style de curseur pour indiquer que c'est cliquable
         icon.style.cursor = 'pointer';
     });

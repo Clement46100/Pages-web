@@ -9,13 +9,14 @@
   --max-width: 980px;
 }
 
-* { 
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -287,39 +288,39 @@ footer {
   .modules-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .search-section {
     flex-direction: column;
     gap: 12px;
   }
-  
+
   .top-nav {
     display: none;
   }
-  
+
   .card {
     padding: 24px 16px;
   }
-  
+
   h1 {
     font-size: 24px;
   }
-  
+
   .module-header {
     padding: 16px;
   }
-  
+
   .module-body {
     padding: 16px;
   }
-  
+
   .module-footer {
     padding: 0 16px 16px;
     flex-direction: column;
     gap: 12px;
     align-items: flex-start;
   }
-  
+
   .btn {
     width: 100%;
   }

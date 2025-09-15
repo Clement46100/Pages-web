@@ -57,18 +57,22 @@ header nav a:hover {
   margin: 0 auto 30px;
 }
 
-.hero button {
+.hero .cta-button {
+  display: inline-block;
   padding: 12px 25px;
   font-size: 16px;
   background: #1d4ed8;
   border: none;
   border-radius: 8px;
   color: #fff;
+  text-decoration: none;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.hero button:hover {
+.hero .cta-button:hover {
   background: #2563eb;
+  text-decoration: none;
 }
 
 .features {
